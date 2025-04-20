@@ -1,7 +1,6 @@
 import os
 from langchain_openai import ChatOpenAI
-from loaders.docload import PDFLoader
-from loaders.docload import TxtLoader
+from docload import PDFLoader
 from langchain.prompts import HumanMessagePromptTemplate, SystemMessagePromptTemplate
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv

@@ -14,9 +14,7 @@ os.environ["LANGCHAIN_PROJECT"] = "CapituloX"
 def main():
     st.set_page_config(page_title="Chat com arquivos pdf", layout="centered")
     st.title("🤖 Pergunte ao CapítuloX – ")
-
-
-
+    
     uploaded_files = st.file_uploader("**Upload your pdf Here**", type="pdf", accept_multiple_files=True)
     if not uploaded_files:
         st.info("Envie um Arquivo")

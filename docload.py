@@ -1,3 +1,4 @@
+import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.document_loaders import BaseLoader
 from langchain_core.documents import Document
@@ -43,6 +44,8 @@ class PDFLoader:
                 raise RuntimeError(f"Erro na busca por similaridade no arquivo {uploaded_file.name}: {e}")
             content = "\n".join([r.page_content for r in results])
             extracted_context.append(content)
+            if tmp_path and os.path.exists(tmp_path):
+                os.remove(tmp_path)
         return extracted_context
 
 class TxtLoader(BaseLoader):

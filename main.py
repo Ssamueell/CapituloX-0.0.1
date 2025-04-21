@@ -24,7 +24,6 @@ def main():
 
     similarity_query = st.text_area(
     "🔍 Escreva o que você quer extrair dos arquivos (consulta de similaridade):",
-    value="Qual é o objetivo principal do artigo?\n\nResumo geral do conteúdo apresentado\n\nO que o autor quer transmitir?"
 )
 
     @st.cache_data

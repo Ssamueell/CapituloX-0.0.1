@@ -22,7 +22,7 @@ def main():
 
     similarity_query = st.text_area(
     "🔍 Escreva o que você quer extrair dos arquivos (consulta de similaridade):",
-)
+    )
 
     @st.cache_data
     def load_context_from_pdfs(uploaded_files, query):
